@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: absolutempipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: absolutempipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: absolutempipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: absolutempipelinesjavascriptdocker 
+          image: 690alaz.azurecr.io/absolutempipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
